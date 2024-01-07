@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/displayTurn"
+        android:layout_width="346dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@color/blue"
+        android:hint="@string/who_s_turn"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <files.tic_tac.Board
+        android:id="@+id/ticTacBoard"
+        custom:OColor="#3DF36B"
+        custom:WinningLineColor="#FF0000"
+        custom:XColor="#0FA08B"
+        custom:boardColor="#2196F3"
+        android:layout_width="310dp"
+        android:layout_height="317dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="41dp"
+        app:layout_constraintEnd_toEndOf="@+id/displayTurn"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="@+id/displayTurn"
+        app:layout_constraintTop_toBottomOf="@+id/displayTurn"
+
+
+        />
+
+    <TextView
+        android:id="@+id/homeButton"
+        android:layout_width="330dp"
+        android:layout_height="46dp"
+        android:layout_below="@id/ticTacBoard"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/blue_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:onClick="homePress"
+        android:text="@string/home_page"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/playAgainButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/playAgainButton"
+        app:layout_constraintTop_toBottomOf="@+id/playAgainButton" />
+
+    <TextView
+        android:id="@+id/playAgainButton"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ticTacBoard"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/blue_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/play_again"
+        android:onClick="playAgainPress"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ticTacBoard"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/ticTacBoard"
+        app:layout_constraintTop_toBottomOf="@+id/ticTacBoard"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
